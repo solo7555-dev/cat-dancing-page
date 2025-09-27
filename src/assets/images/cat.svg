@@ -1,0 +1,56 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cat body -->
+  <ellipse cx="100" cy="120" rx="45" ry="35" fill="#FFB347" stroke="#FF8C00" stroke-width="2"/>
+
+  <!-- Cat head -->
+  <circle cx="100" cy="70" r="35" fill="#FFB347" stroke="#FF8C00" stroke-width="2"/>
+
+  <!-- Cat ears -->
+  <polygon points="75,45 85,25 95,45" fill="#FFB347" stroke="#FF8C00" stroke-width="2"/>
+  <polygon points="105,45 115,25 125,45" fill="#FFB347" stroke="#FF8C00" stroke-width="2"/>
+
+  <!-- Inner ears -->
+  <polygon points="78,42 83,30 88,42" fill="#FFE4B5"/>
+  <polygon points="112,42 117,30 122,42" fill="#FFE4B5"/>
+
+  <!-- Cat eyes -->
+  <ellipse cx="90" cy="65" rx="6" ry="8" fill="#2E8B57"/>
+  <ellipse cx="110" cy="65" rx="6" ry="8" fill="#2E8B57"/>
+  <ellipse cx="90" cy="63" rx="3" ry="4" fill="#000"/>
+  <ellipse cx="110" cy="63" rx="3" ry="4" fill="#000"/>
+  <circle cx="88" cy="61" r="1.5" fill="#FFF"/>
+  <circle cx="108" cy="61" r="1.5" fill="#FFF"/>
+
+  <!-- Cat nose -->
+  <polygon points="100,75 95,80 105,80" fill="#FF69B4"/>
+
+  <!-- Cat mouth -->
+  <path d="M 100 82 Q 95 85 90 82" stroke="#000" stroke-width="2" fill="none"/>
+  <path d="M 100 82 Q 105 85 110 82" stroke="#000" stroke-width="2" fill="none"/>
+
+  <!-- Cat whiskers -->
+  <line x1="65" y1="70" x2="45" y2="68" stroke="#000" stroke-width="1.5"/>
+  <line x1="65" y1="75" x2="45" y2="75" stroke="#000" stroke-width="1.5"/>
+  <line x1="135" y1="70" x2="155" y2="68" stroke="#000" stroke-width="1.5"/>
+  <line x1="135" y1="75" x2="155" y2="75" stroke="#000" stroke-width="1.5"/>
+
+  <!-- Cat legs -->
+  <ellipse cx="80" cy="150" rx="8" ry="15" fill="#FFB347" stroke="#FF8C00" stroke-width="2"/>
+  <ellipse cx="120" cy="150" rx="8" ry="15" fill="#FFB347" stroke="#FF8C00" stroke-width="2"/>
+  <ellipse cx="85" cy="152" rx="8" ry="12" fill="#FFB347" stroke="#FF8C00" stroke-width="2"/>
+  <ellipse cx="115" cy="152" rx="8" ry="12" fill="#FFB347" stroke="#FF8C00" stroke-width="2"/>
+
+  <!-- Cat paws -->
+  <circle cx="80" cy="165" r="6" fill="#8B4513"/>
+  <circle cx="120" cy="165" r="6" fill="#8B4513"/>
+  <circle cx="85" cy="164" r="6" fill="#8B4513"/>
+  <circle cx="115" cy="164" r="6" fill="#8B4513"/>
+
+  <!-- Cat tail -->
+  <ellipse cx="55" cy="130" rx="12" ry="25" fill="#FFB347" stroke="#FF8C00" stroke-width="2" transform="rotate(-30 55 130)"/>
+
+  <!-- Cat stripes -->
+  <ellipse cx="100" cy="110" rx="25" ry="3" fill="#FF8C00" opacity="0.6"/>
+  <ellipse cx="100" cy="125" rx="30" ry="3" fill="#FF8C00" opacity="0.6"/>
+  <ellipse cx="100" cy="140" rx="25" ry="3" fill="#FF8C00" opacity="0.6"/>
+</svg>

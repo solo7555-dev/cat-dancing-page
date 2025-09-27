@@ -1,0 +1,193 @@
+.dancing-cat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dancing-cat-container {
+    gap: 1.5rem;
+    margin-top: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dancing-cat-container {
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.cat-wrapper {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  will-change: transform;
+}
+
+@media (max-width: 768px) {
+  .cat-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cat-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.cat-image {
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  max-height: 200px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  transition: all 0.3s ease;
+}
+
+/* Dancing animation keyframes */
+@keyframes catDance {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  10% {
+    transform: translateY(-10px) rotate(5deg) scale(1.05);
+  }
+  20% {
+    transform: translateY(-20px) rotate(-5deg) scale(0.95);
+  }
+  30% {
+    transform: translateY(-15px) rotate(10deg) scale(1.1);
+  }
+  40% {
+    transform: translateY(-5px) rotate(-10deg) scale(0.9);
+  }
+  50% {
+    transform: translateY(-25px) rotate(0deg) scale(1.15);
+  }
+  60% {
+    transform: translateY(-15px) rotate(15deg) scale(0.85);
+  }
+  70% {
+    transform: translateY(-10px) rotate(-15deg) scale(1.05);
+  }
+  80% {
+    transform: translateY(-20px) rotate(8deg) scale(0.95);
+  }
+  90% {
+    transform: translateY(-5px) rotate(-8deg) scale(1.1);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)) hue-rotate(0deg);
+  }
+  25% {
+    filter: drop-shadow(0 4px 8px rgba(255, 0, 150, 0.5)) hue-rotate(90deg);
+  }
+  50% {
+    filter: drop-shadow(0 4px 8px rgba(0, 255, 150, 0.5)) hue-rotate(180deg);
+  }
+  75% {
+    filter: drop-shadow(0 4px 8px rgba(150, 0, 255, 0.5)) hue-rotate(270deg);
+  }
+  100% {
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)) hue-rotate(360deg);
+  }
+}
+
+/* Apply animation when dancing class is active */
+.cat-wrapper.dancing .cat-image {
+  animation:
+    catDance 1.5s ease-in-out infinite,
+    shimmer 3s ease-in-out infinite;
+}
+
+.animation-button {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  touch-action: manipulation;
+}
+
+@media (max-width: 768px) {
+  .animation-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .animation-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+  }
+}
+
+.animation-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #ff5252, #26a69a);
+}
+
+.animation-button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Pulse animation for the button when cat is dancing */
+.cat-wrapper.dancing ~ .animation-button {
+  animation: buttonPulse 2s ease-in-out infinite;
+}
+
+@keyframes buttonPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hint {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin: 0;
+  text-align: center;
+  font-style: italic;
+}
+
+@media (max-width: 480px) {
+  .hint {
+    font-size: 0.8rem;
+  }
+}
